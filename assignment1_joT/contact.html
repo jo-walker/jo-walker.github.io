@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Jo Gurvantamir is a computer programming student who builds accessible, inclusive products, and digital programs.">
+        <meta name="author" content="Jo Gurvantamir">
+        <meta name="keywords" content="Jo Gurvantamir, Computer Programming, Web Development, Software Development, Accessibility, Inclusive Design">
+        <title>joT. | Jo Gurvantamir</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+    <header>
+        <div id="header" class="header">
+            <h1>
+                <a href="#">Jo Gurvantamir</a>
+            </h1>
+            <h2>
+                Computer Programming Student
+            </h2>
+            <p>
+                I learn, design, code, debug, and deploy.
+            </p>
+         <!-- HTML for the hamburger menu -->
+         <label class="hamburger-menu" for="toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <!-- Hidden checkbox -->
+        <input type="checkbox" id="toggle" class="toggle-menu" hidden>
+            <nav class="nav" aria-label="In-page jump links">
+                <a href="index.html">About me</a>
+                <a href="resume.html">Résumé</a>
+                <a href="courses.html">Courses</a>
+                <a href="contact.html" class="active"><strong>Contact me!</strong></a>
+
+                <!-- Add font awesome icons -->
+                <a href="https://github.com/jo-walker" class="fa fa-github"></a>
+                <a href="https://www.linkedin.com/in/jo-tamir/" class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/theworldofjoes/" class="fa fa-instagram"></a>
+                
+            </nav>            
+        </div>
+    </header>  
+
+    <main>
+        <section id="contact">
+            <div class="contact">
+                <form action="contact.php" method="POST">
+                    <h2>Contact me!</h2>
+                    <fieldset>
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your name here.." required>
+                        </div>
+                        <div>
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div>
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" name="subject" minlength="5" maxlength="50" required>
+                        </div>
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" minlength="10" maxlength="500" placeholder="What do you wanna say?" required></textarea>
+                        </div>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; joT. All rights reserved.</p>
+    </footer>
+</body>
+</html>

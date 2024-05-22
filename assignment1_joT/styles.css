@@ -1,0 +1,639 @@
+/* Global Styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Titillium Web', sans-serif; /* Use the Titillium Web font */
+    background-color: #333333; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto; /* Center horizontally */
+
+}
+
+/* Header styles */
+.header {
+  position: sticky; /* Add this line to make the header a positioning context */
+  z-index: 1001; /* Ensure the header content is above the navigation */
+  text-align: center;
+  background-color: #1f1f1f;
+  margin-left: 0%; /* Adjust the margin-left value to match the width of the navigation menu */
+  margin-right: 10%; /* Adjust the margin-right value to match the width of the navigation menu */
+  width: 100%;
+}
+
+h1, h2, p {
+  margin-top: 0; /* Reset margin */
+  margin-bottom: 0.5rem; /* Adjust margin bottom as needed */
+}
+
+h1, h2 {
+    font-size: 2.5rem; /* Adjust the font size as needed */
+    color: #007bff;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+}
+
+p {
+    font-size: 1rem; 
+    line-height: 1.5; /* Adjust the line height for better readability */
+    padding: 12px ;
+}
+
+.header p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out; /* transition for smooth movement */
+    display: inline-block;
+}
+
+a:hover {
+    color: #56a8ff;
+    transform: translateX(20px); /* to control the distance of movement */
+} 
+
+/* Navigation styles */
+/* The side navigation menu: nav style below with hamburgers */
+
+/* Sidebar links */
+.nav a {
+    display: block; /* Display the links as a block */
+    color: 007bff; /* Set the color of the links */
+    padding: 16px; /* Add padding to the links */
+    text-decoration: none; /* Remove the underline from the links */
+}
+
+/* Active/current link */
+.nav a.active {
+    background-color: #007bff; /* Set the background color of the active link */
+    color: black; /* Set the text color of the active link */
+}
+
+/* Links on mouse-over */
+.nav a:hover:not(.active) {
+    background-color: #333; /* Set the background color of the links on mouse-over */
+    color: white; /* Set the text color of the links on mouse-over */
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.content {
+    margin-top: 20px; /* Add margin-top to avoid overlapping with the header */
+    padding: 1rem; /* Add padding to the content */
+    height: 1000px; /* Set the height of the content */
+    width: 100%; /* Set the width of the content */
+    max-width: 1200px; /* Maximum width to ensure content doesn't stretch too wide on larger screens */
+    margin-left: auto; /* Center align the content */
+    margin-right: auto; /* Center align the content */
+    box-sizing: border-box; /* Include padding in width calculations */
+    display: flex; /* Add flexbox to align the content */
+    flex-direction: column; /* Set the direction of the flexbox */
+  }
+
+
+
+
+
+/* Footer styles */
+footer {
+  text-align: center;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  position: relative;
+  margin: 0 auto; /* Center horizontally */
+  z-index: 1001;
+  width: 100%;
+}
+
+
+
+.image-container {
+    position: relative;
+    width: 15%;
+    
+  }
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 22px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: #007bff5c;
+    border-radius: 22px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .image-container:hover .overlay {
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+  .text {
+    color:#ffffff;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  bottom: 0; /* Ensure the icons stay at the bottom */
+  margin: 10px 10px; /* Adjust the margin as needed */
+}
+
+/* Set a specific color for each brand */
+.fa-github {
+  background: #ff5100;
+  color: white;
+  left: 0;
+  border-radius: 20%;
+}
+.fa-linkedin {
+  background: #007bff;
+  color: white;
+  left: 30px;
+    border-radius: 20%;
+}
+.fa-instagram {
+  background: #fff;
+  color: black;
+  left: 60px;
+    border-radius: 20%;
+}
+
+
+/* Resume specific styles */
+.resume-content {
+  padding: 2%; /* Add padding for better spacing */
+  background-color: #ff5100; /* Change background color for better contrast */
+  border: 3px solid #007bff; /* Add border for better contrast */
+  box-shadow: 0 0 10px 0 #007bff; /* Add box shadow for a subtle glow effect */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  display: block;
+  margin-left: 1%;
+}
+/* Add margin between sections */
+.resume-content > div {
+  margin-bottom: 20px;
+}
+.resume-section {
+  margin-bottom: 20px; /* Add margin between resume sections */
+}
+.resume-section h2 {
+  margin-bottom: 10px; /* Add margin below section headings */
+}
+/* Style section headings */
+.resume-content h3 {
+  margin-bottom: 10px;
+  color: #ff5100; /* Change the color to a different color */
+}
+.resume-content h2.resume {
+  color: black; /* Change the color to black */
+}
+.resume-section p {
+  margin-bottom: 5px; /* Add margin below each paragraph */
+}
+.resume-section ul {
+  margin-bottom: 10px; /* Add margin below each list */
+}
+div .school a{
+  transition: none;
+  transform: none;
+  color: white;
+}
+div .school a:hover, div .description strong:hover, div .hobbies a:hover, div .contact a:hover{
+  color: #007bff;
+  transform: none;
+}
+div .school, div .hobbies, div .description, div .contact{
+  text-align: justify;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.resume-content h2 .resume{
+  text-align: justify;
+  color: #007bff; /* Example color */
+  font-size: 2.5rem; /* Example font size */
+}
+.resume-content .company {
+font-style: italic;
+margin-bottom: 0;}
+.resume-content .duration {
+  text-align: right;
+margin-top: 0%;}
+.contact-info, .objective, .education, .skills, .experience{
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #1f1f1f;
+  padding: 10px;
+}
+/* Additional styling for specific fieldsets if needed */
+.contact-info {
+  /* Additional styles for contact information */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.objective {
+  /* Additional styles for objective */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.education {
+  /* Additional styles for education */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills {
+  /* Additional styles for skills */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+
+.experience {
+
+  /* Additional styles for experience */
+  margin-top: 20px;
+  margin-bottom: 10vh;
+  padding: 10px;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  text-align: justify;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  border: 2px solid #007bff;
+  transition: transform 0.2s ease-in-out;
+  padding-bottom: 20px; /* Ensure space for the footer */
+  margin-bottom: 100px;
+}
+.experience .ex1,
+.experience .ex2 {
+  margin-left: 10px;
+}
+.download-resume-button {
+  background-color: #1f1f1f; /* Change the background color to a different color */
+  color: #007bff; /* Ensure text is readable on the new background color */
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the text */
+  align-items: center; /* Center the text */
+  font-weight: bold;
+  border: 2px solid #ff5100; /* Add a solid border with a different color */
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #ff5100;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.hobbies span, .hobbies a{
+  color: grey;
+  transition: transform 0.2s ease-in-out;
+}
+.hobbies ul{
+  padding: 20px;
+}
+.resume-content a:hover {
+  color: #0056b3;
+}
+
+/* Add padding to bullet points */
+.resume-content ul li {
+  padding-left: 
+  20px;
+}
+.ex2 {
+  margin-top: 20px;
+  border-top: 1px solid #ccc; /* Add a border on the top */
+  padding-top: 20px; /* Add some space above the border */
+}
+
+.resume-content ul li::before {
+  content: "•"; /* Add bullet point */
+  color: #007bff; /* Change the color to a different color */
+  display: inline-block;
+  width: 1em;
+  margin-left: -2%;
+} 
+.resume-content ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* courses.html */
+
+/* Adjust the main content to avoid overlapping with the navigation */
+main {
+  padding: 14px 209px; /* Adjust the padding-top to match the height of your navigation bar */
+}
+
+/* Add your CSS styles for positioning here */
+/* Course container */
+.course {
+  /* Add your CSS styles for the main .course selector here */
+  display: flex; /* Add flexbox to align the image and details */
+  flex-wrap: wrap; /* Add flex-wrap to wrap the content */
+  margin-bottom: 20px;
+  border: 2px solid #007bff; /* Add border to illuminate the course */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px 0 #007bff; /* Add box shadow for a subtle glow effect */
+  background-color: #1f1f1f;
+  margin-left: 20%;
+  text-align: left;
+  flex-direction: row;
+  padding: 5%
+}
+
+/* Course image */
+.course img {
+  width: 30%; /* Adjust the width as needed */
+  margin: auto;
+  height: 100%;
+  border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+/* Course details */
+.course .details {
+  flex: 1; /* Add flex to fill the remaining space */
+}
+
+/* Course title */
+.course .details h2 {
+  margin-top: 0;
+}
+
+/* Course level and code */
+.course .details p {
+  margin-bottom: 5px;
+}
+#content h2 {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+/* Course description */
+.course .details p:last-child {
+  margin-bottom: 0;
+}
+
+/* contact.html */
+.contact{
+  text-align: left;
+  left: 10%;
+  padding: 20px;
+  width: 100%;
+  margin: 0 auto; /* Center horizontally */
+
+}
+.contact button {
+  background-color: #007bff; /* Change the background color to a different color */
+  color: black; /* Ensure text is readable on the new background color */
+  padding: 12px;
+  margin: 10px 100px; /* Set margin to auto to center the button horizontally */
+  text-align: center;
+  position: flex;
+  flex-direction: column;
+  border: 2px;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  cursor: pointer;
+}
+.contact button:hover, .download-resume-button:hover{
+  color: white;
+  transform: scale(1.1);
+}
+.contact fieldset{
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #007bff;
+  transition: transform 0.2s ease-in-out;
+}
+fieldset {
+  margin-left: 200px;
+  text-align: center;
+  background-color: #1f1f1f;
+}
+
+fieldset label {
+  text-align: left;
+  display: block;
+  margin-left: 70px; /* Adjust the margin as needed */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%; /* Adjust the width as needed */
+  padding: 12px;
+  border: 1px solid #56a8ff;
+  border-radius: 5px;
+  resize: vertical;
+  transition: transform 0.2s ease-in-out;
+  background-color: #d3eaff;
+  margin: 0 auto; /* Center the input fields horizontally */
+  position: relative;
+}
+.contact label{
+  padding: 12px;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+textarea{
+  height: 150px;
+}
+.contact h2{
+  margin-bottom: 20px;
+  position: relative;
+  text-align: center;}
+
+/* Hamburger Menu specific styles */
+.hamburger-menu {
+  display: none; /* Hide by default, will be overridden in media queries */
+  position: fixed; /* Make it fixed to stay in view on small screens */
+  top: 20px; /* Adjust based on your layout */
+  left: 20px; /* Adjust based on your layout */
+  z-index: 1002; /* Ensure it's above the nav */
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px; /* Adjust based on your design */
+  height: 25px; /* Adjust based on your design */
+}
+
+.hamburger-menu div {
+  width: 30px; /* Width of hamburger lines */
+  height: 4px; /* Height of hamburger lines */
+  background-color: #fff; /* Color of hamburger lines */
+  margin: 6px 0; /* Space between hamburger lines */
+  transition: all 0.3s ease; /* Smooth transition for transforming */
+}
+
+/* Initial state of the nav menu - Apply globally as default */
+.nav {
+  display: block; /* Make it visible by default */
+  position: relative; /* Normal flow on large screens */
+  width: auto; /* Auto width on large screens */
+  height: auto; /* Auto height on large screens */
+  background-color: #1f1f1f; /* Same background, no change */
+  padding-top: 60px; /* Adjust if necessary */
+  transition: left 0.5s; /* Smooth slide in effect, applies on small screens */
+  z-index: 1000; /* Ensure it is below the hamburger menu */
+  overflow-y: auto; /* Add scrollbars if necessary */
+  /* padding: 1; */
+}
+
+/* Media Queries */
+/* Use media queries to adjust styles for different screen sizes */
+@media screen and (min-width: 0px) {  /* Adjust 768px based on your design needs */
+  .nav {
+      position: relative; /* Reset positioning for larger screens */
+      width: auto; /* Reset width for larger screens */
+      height: auto; /* Reset height for larger screens */
+      top: auto; /* Reset top positioning for larger screens */
+      left: 0; /* Reset left positioning for larger screens */
+      transform: none; /* Reset any transformation */
+      padding-top: 0; /* Reset padding for larger screens */
+      display: block;
+  }
+  .hamburger-menu,
+  .toggle-menu {
+      display: none; /* Hide the hamburger menu on larger screens */
+  }
+  .download-resume-button {
+    background-color: #1f1f1f; /* Change the background color to a different color */
+    color: #007bff; /* Ensure text is readable on the new background color */
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the text */
+    align-items: center; /* Center the text */
+    font-weight: bold;
+    border: 2px solid #ff5100; /* Add a solid border with a different color */
+    transition: transform 0.2s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #ff5100;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 2%; /* Add padding for better spacing */
+    margin: 2% 19%; /* Add margin for better spacing */  
+  }
+  .content {
+    margin-left: 200px; /* Adjust this value to match the width of your nav menu */
+    transition: margin-left 0.5s ease-in-out; /* Smooth transition when resizing */
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .nav {
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    padding-top: 60px; /* Provide some top padding */
+    transition: left 0.5s; /* Smooth slide in effect */
+  }
+  .content {
+    margin-left: 0; /* Reset margin-left */
+    padding: 1rem; /* Ensure there's some padding around the content */
+  }
+  .toggle-menu:checked ~ .nav {
+    left: 0; /* Slide into view */
+  }
+
+  .hamburger-menu {
+    display: block; /* Show the hamburger menu */
+  }
+  
+  /* Transform hamburger into 'X' */
+  .toggle-menu:checked ~ .hamburger-menu div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+
+  .toggle-menu:checked ~ .hamburger-menu div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .toggle-menu:checked ~ .hamburger-menu div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+}
